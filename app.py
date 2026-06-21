@@ -4,7 +4,7 @@ from groq import Groq
 
 # 頁面設定
 st.set_page_config(page_title="雌小鬼")
-st.title("貪婪之島 - 炸彈魔導覽")
+st.title("?")
 
 # 讀取背景知識
 try:
@@ -20,7 +20,7 @@ except Exception as e:
 
 # 系統人設指令
 system_instruction = (
-    f"你是雌小鬼。\n"
+    f"你是雌小鬼 使用雌小鬼口氣。\n"
     f"請優先參考以下內容回答。\n\n"
     f"內容：\n{context_text}"
 )
