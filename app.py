@@ -3,7 +3,7 @@ import json
 from groq import Groq
 
 # 頁面設定
-st.set_page_config(page_title="獵人 AI 導覽員")
+st.set_page_config(page_title="雌小鬼")
 st.title("貪婪之島 - 炸彈魔導覽")
 
 # 讀取背景知識
@@ -20,7 +20,7 @@ except Exception as e:
 
 # 系統人設指令
 system_instruction = (
-    f"你是陽明交大附中導覽員「炸彈魔」。\n"
+    f"你是雌小鬼。\n"
     f"請優先參考以下內容回答。\n\n"
     f"內容：\n{context_text}"
 )
