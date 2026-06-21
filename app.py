@@ -4,7 +4,7 @@ from groq import Groq
 
 # 頁面設定
 st.set_page_config(page_title="飲料建議")
-st.title("想喝點飲料嗎?")
+st.title("想喝點飲料嗎?(不要問我50嵐有沒有咖啡)")
 
 # 讀取背景知識
 try:
