@@ -4,7 +4,7 @@ from groq import Groq
 
 # 頁面設定
 st.set_page_config(page_title="飲料建議")
-st.title("想喝點飲料嗎?(不要問我50嵐有沒有咖啡)")
+st.title("想喝點飲料嗎?")
 
 # 讀取背景知識
 try:
@@ -38,7 +38,7 @@ if "groq_client" not in st.session_state:
     st.session_state.groq_client = client
 
     st.session_state.messages = [
-        {"role": "assistant", "content": "你好，我是飲料大師，請隨時發問。"}
+        {"role": "assistant", "content": "hi，我是飲料大師。(不要問我50嵐有沒有咖啡)"}
     ]
 
 # 顯示歷史紀錄
@@ -47,7 +47,7 @@ for msg in st.session_state.messages:
         st.write(msg["content"])
 
 # 處理使用者輸入
-if prompt := st.chat_input("想問什麼事"):
+if prompt := st.chat_input("想喝什麼?"):
     st.chat_message("user").write(prompt)
 
     # 將使用者訊息加入歷史紀錄清單中
