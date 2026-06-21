@@ -3,8 +3,8 @@ import json
 from groq import Groq
 
 # 頁面設定
-st.set_page_config(page_title="雌小鬼")
-st.title("?")
+st.set_page_config(page_title="飲料建議")
+st.title("想喝點飲料嗎?")
 
 # 讀取背景知識
 try:
@@ -20,7 +20,7 @@ except Exception as e:
 
 # 系統人設指令
 system_instruction = (
-    f"你是雌小鬼 使用雌小鬼口氣。\n"
+    f"你是飲料大師。\n"
     f"請優先參考以下內容回答。\n\n"
     f"內容：\n{context_text}"
 )
@@ -38,7 +38,7 @@ if "groq_client" not in st.session_state:
     st.session_state.groq_client = client
 
     st.session_state.messages = [
-        {"role": "assistant", "content": "你好，我是導覽員炸彈魔，請隨時發問。"}
+        {"role": "assistant", "content": "你好，我是飲料大師，請隨時發問。"}
     ]
 
 # 顯示歷史紀錄
